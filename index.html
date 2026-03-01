@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Christina Lee" />
+  <meta name="description" content="Website of Christina Lee, Privacy and Technology Law Fellow @ GW Law School" />
+  <title>Christina Lee’s Website</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+      scrollbar-width: none;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      font-kerning: normal;
+    }
+    #cv_link {
+      display: none;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      #cv_frame {
+        display: none;
+      }
+
+      #cv_link {
+        display: block;
+      }
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      margin: 1em 0;
+      text-align: justify;
+    }
+    a:after {
+      content: "\221E";
+      transform:rotate(-45deg);
+      display:inline-block;
+      padding-left: 0.2em;
+    }
+    a.email:after {
+      content: "\2709";
+      display: inline-block;
+      transform:rotate(0);
+      padding-left: 0.2em;
+    }
+    nav a:after{
+      content: "";
+      padding-left: 0em;
+    }
+    h1 a:after{
+      content: "";
+      padding-left: 0em;
+    }
+
+    h1 a {
+      color: #1a1a1a;
+    }
+    nav ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    nav ul {
+      display:flex;
+      justify-content: center;
+      place-items: center;
+      width: 100%;
+      gap: 1px;
+      background-color: #1a1a1a;
+    }
+    div.images {
+      display: flex;
+      width: 100%;
+      gap: 1px;
+    }
+    div.images img {
+      display: block;
+      flex: 1;
+      margin: auto;
+    }
+    nav ul li {
+      display: block;
+      flex: 1;
+      margin: auto;
+      text-align: center;
+      background-color: #fdfdfd;
+    }
+    a {
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #888;;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    .tab {
+      scroll-margin-top: 3000px;
+      display: none;
+    }
+    .tab:target {
+      display: block;
+    }
+
+    body:not(:has(:target)) .default {
+      display:block;
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+      nav {
+        display: none;
+      }
+      .tab {
+        display: block;
+      }
+      #cv_frame {
+        display: none;
+      }
+
+      #cv_link {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+<h1 id="eun-soo-christina-lee"><a href="#">Eun Soo “Christina” Lee</a></h1>
+<nav>
+  <ul>
+    <li><a href="#about">About Me</a></li><li><a href="#publications">Publications</a></li><li><a href="#teaching">Teaching</a></li><li><a href="#cv">CV</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+<section id="home" class="tab default">
+<h2>Welcome!</h2>
+<p>This is the personal website of Christina Lee, the Privacy and Technology Law Fellow
+  at the George Washington University Law School.
+  I attempt to keep a record of what I've been up to here.
+  The contents of the website mostly relate to my own scholarly endeavors,
+  but I may add other things here and there if I feel so moved.
+</p>
+<p>As you can probably tell, web development and
+graphic design were not my focus during my studies, but I hope this
+website gives you some sense of who I am.</p>
+
+<p>This website was initially written in <a href=https://en.wikipedia.org/wiki/Markdown target="_blank" and rel="noopener noreferrer">Markdown</a>
+before being converted into html using <a href=https://pandoc.org/ target="_blank" and rel="noopener noreferrer">pandoc</a>.
+I've made adjustments and added things on top, but the bones of this website remain what pandoc generated from the Markdown file.
+So if you're thinking it looks more like a document than a website, well, you're not wrong.</p>
+
+<p>This website is on GitHub Pages, which means that per
+<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" target="_blank" and rel="noopener noreferrer">GitHub's docs</a>,
+your IP address will be logged and stored by GitHub for security purposes. I do not run any additional analytics on this website.</p>
+</section>
+<section id="about" class="tab">
+<h2 id="about-me">About Me</h2>
+<img src="assets/headshot.jpeg" width="50%" alt="Headshot of Christina Lee"></img>
+<p>I am currently a Visiting Associate Professor of Law and the
+inaugural Privacy and Technology Law Fellow at the George Washington
+University Law School (<a
+href="https://www.law.gwu.edu/christina-lee" target="_blank" and rel="noopener noreferrer">faculty profile</a>). In
+the fall of 2026, I will start as an Assistant Professor of Law at the
+University of San Diego School of Law. My scholarship explores how the
+law should address the harms of emerging technologies like artificial
+intelligence (AI), particularly in light of the complexity of the tech
+ecosystem involved in producing, developing, and deploying products and
+services powered by emerging technologies, and I teach courses that are
+related to my research areas. I received my J.D. <em>cum laude</em> from
+Harvard Law School and am licensed to practice law in Massachusetts.</p>
+<p>Before pivoting to law, I spent five years as a product manager at
+Microsoft (back when product managers at Microsoft were called program
+managers), working on a number of AI- and data-powered enterprise
+software, making use of my Master of Science in Computer Science with a
+specialization in AI from Stanford University. I also received from Stanford a
+B.S. with Distinction in Mathematics and a B.A. with Distinction in
+International Relations. My academic background in computer science and
+experience in the tech industry deeply informs my legal scholarship.</p>
+<p>Outside of work, I enjoy going to see plays and musicals, solving
+crosswords, tinkering with self-hosting and other computer stuff, and
+watching my cats, Charlie and Luna, be goofy.</p>
+<p>I was born and raised in Seoul, South Korea.</p>
+<div class="images"><img src="assets/charlie.jpeg" width="50%" alt="A picture of a gray tabby kitten"></img>
+<img src="assets/luna.jpeg" width="50%" alt="A picture of a sleeping torbie cat, all curled up"></img></div>
+<p>Cat tax: Charlie (left) and Luna (right)</p>
+</section>
+<section id="publications" class="tab">
+<h2>Publications</h2>
+<h3 id="law-reviewpeer-reviewed-publications">Law Review/Peer-Reviewed
+Publications</h3>
+<p><em>AI Agents’ Shadow Principals</em>, 17 <span style="font-variant: small-caps;">U.C. Irvine L. Rev.</span> (forthcoming; work in progress)</p>
+<p><em>Protecting Consumers in the Interactions Behind AI Agents</em>, <span style="font-variant: small-caps;">40 Harv.
+J.L. &amp; Tech.</span> (forthcoming; work in progress)
+(invited symposium contribution)</p>
+<p><a
+href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5212510" target="_blank" and rel="noopener noreferrer"><em>Beyond
+Algorithmic Disgorgement: Remedying Algorithmic Harms</em></a>, 16 <span style="font-variant: small-caps;">U.C.
+Irvine L. Rev.</span> (forthcoming 2026)
+<ul>
+  <li>
+    Winner of the Future of Privacy Forum’s 16th Annual Privacy Papers for Policymakers Award
+  </li>
+  <li>
+    Reviewed in Margot Kaminski, <a href="https://cyber.jotwell.com/ai-disgorgement-or-ai-recalls-a-trip-down-remedy-lane/" target="_blank" and rel="noopener noreferrer"><em>AI Disgorgement or AI Recalls: A Trip down Remedy Lane</em></a>, <span style="font-variant: small-caps;">JOTWELL: Journal of Things We Like (Lots)</span> (Sep. 3, 2025)
+  </li>
+</ul>
+</p>
+<p><a href="https://doi.org/10.1145/3715275.3732215" target="_blank" and rel="noopener noreferrer"><em>Consistently
+Arbitrary or Arbitrarily Consistent: Navigating the Tensions Between
+Homogenization and Multiplicity in Algorithmic Decision-Making:
+Navigating the Tensions Between Homogenization and Multiplicity in
+Algorithmic Decision-Making</em></a>, <span style="font-variant: small-caps;">FAccT ’25: Procs. 2025 ACM Conf.
+on Fairness, Accoutability, and Transparency</span> 3336 (2025) (with Shira Gur-Arieh)</p>
+<h3 id="other-writing">Other Writing</h3>
+<p><a
+href="https://www.techpolicy.press/kosas-path-forward-distinguishing-design-from-content-to-maintain-free-speech-protections/" target="_blank" and rel="noopener noreferrer"><em>KOSA’s
+Path Forward: Distinguishing Design from Content to Maintain Free Speech
+Protections</em></a>, <span style="font-variant: small-caps;">Tech Pol’y Press</span> (Oct. 1, 2024) (with Caitlin Burke &amp;
+Jennifer King)</p>
+</section>
+<section id="teaching" class="tab">
+<h2>Teaching</h2>
+<h3 id="at-george-washington-university-law-school">At the George Washington
+University Law School</h3>
+<h4
+id="technology-law-seminar-regulating-ai-bias-and-discrimination">Technology
+Law Seminar (Regulating AI Bias and Discrimination)</h4>
+<p>This seminar focuses on the regulation of AI bias and discrimination.
+We look at how issues of bias and discrimination arise in AI systems. We
+examine at how existing laws—anti-discrimination, consumer protection,
+privacy, etc.—grapple with these issues, where they succeed and where
+they fail, and how new laws specifically targeting AI fill the gap. We
+also look at how technical advances create not only problems but also
+tools to combat bias and discrimination.</p>
+</section>
+<section id="cv" class="tab">
+<h2>Curriculum Vitae</h2>
+<iframe id="cv_frame" src="assets/cv.pdf#view=FitH" width="100%" height="500px" style="border: none;" title="Curriculum Vitae">
+</iframe>
+<a id="cv_link" href="assets/cv.pdf" target="_blank" and rel="noopener noreferrer">Download my CV.</a>
+</section>
+<section id="contact" class="tab">
+<h2>Contact</h2>
+<p>Best way to reach me is by email at <a class="email"
+href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x63;&#x6f;&#x6e;&#x74;&#x61;&#x63;&#x74;&commat;&#x63;&#x68;&#x72;&#x69;&#x73;&#x74;&#x69;&#x6e;&#x61;&#x2d;&#x6c;&#x65;&#x65;&period;&#x6d;&#x65;">contact [at] christina-lee [dot]
+me</a>.</p>
+<p>If what you wish to contact me about directly relates to my current position at GW Law, please email me instead at <a class="email" href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x63;&#x68;&#x72;&#x69;&#x73;&#x74;&#x69;&#x6e;&#x61;&period;&#x6c;&#x65;&#x65;&commat;&#x6c;&#x61;&#x77;&period;&#x67;&#x77;&#x75;&period;&#x65;&#x64;&#x75;">christina [dot] lee [at] law [dot] gwu [dot] edu</a>.</p>
+<p>My LinkedIn profile can be found <a
+href="https://www.linkedin.com/in/eun-soo-christina-lee/" target="_blank" and rel="noopener noreferrer">here</a>.</p>
+</section>
+</body>
+</html>
